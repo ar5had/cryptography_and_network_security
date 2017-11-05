@@ -54,7 +54,7 @@ const deleteSingleFile = name => {
 
   fs.unlink(resolvedFilePath, err => {
     if(err)
-      return console.error(`${name}: file can't be deleted! \n`);
+      return console.error(`${name}: file not found! \n`);
     console.log(`${name} file deleted! \n`);
   });
 };
@@ -72,23 +72,35 @@ const deleteMultipleFiles = fileName => {
   });
 };
 
+const action = process.argv[2].toString().toUpperCase();
 
 // read fileName from command line argument
-const fileName = process.argv[2];
-
-const action = process.argv[3].toString().toUpperCase();
+const fileName = process.argv[3];
 
 const fileFormat = process.argv[4];
-
-console.log(fileFormat)
 
 switch (action) {
   case 'CREATE':
     createMultipleFiles(fileName, fileFormat === undefined ? '' : fileFormat);
     break;
+
   case 'DELETE':
     deleteMultipleFiles(fileName);
     break;
+
+  case 'HELP':
+  console.log(
+`
+VALID COMMANDS:
+
+1. CREATE
+ex - node fileManager create <file_name> <format>
+2. DELETE
+ex - node fileManager delete <file_name>
+`
+  );
+  break;
+
   default:
     console.log(
 `
