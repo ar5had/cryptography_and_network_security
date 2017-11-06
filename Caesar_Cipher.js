@@ -1,8 +1,15 @@
 const prompt = require('prompt');
 
+const getEncryptedLetter = (e, key) => {
+  const charCode = e.charCodeAt(0);
+  const minCode = e.toUpperCase() === e ? 'A'.charCodeAt(0) : 'a'.charCodeAt(0);
+  const diff = charCode - minCode + Number(key);
+  return String.fromCharCode(minCode + (diff%26));
+};
+
 const encrypt = (text, key) =>
  text.split('')
- 	.map(e=>String.fromCharCode(e.charCodeAt(0) + Number(key))).join('') ;
+ 	.map(e=>getEncryptedLetter(e, key)).join('') ;
 
 prompt.start();
 
