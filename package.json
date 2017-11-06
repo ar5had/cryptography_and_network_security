@@ -1,0 +1,26 @@
+{
+  "name": "cryptography_and_network_security",
+  "version": "1.0.0",
+  "description": "Some basic cns programs using node.js!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arshdkhn1/cryptography_and_network_security.git"
+  },
+  "keywords": [
+    "cns",
+    "nodejs"
+  ],
+  "author": "Arshad Khan <arshdkhn1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arshdkhn1/cryptography_and_network_security/issues"
+  },
+  "homepage": "https://github.com/arshdkhn1/cryptography_and_network_security#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
