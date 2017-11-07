@@ -20,6 +20,9 @@ prompt.get('text', (err, { text }) => {
 	if(!err) {
 		prompt.get('key', (err, { key }) => {
 			if(!err) {
+        // handles negative key test cases
+        if(key < 0) return 26 + key;
+        
 				console.log(`Original text: ${text}`);
 				console.log(`Encrypted text: ${encrypt(text,key)}`);
 			}
