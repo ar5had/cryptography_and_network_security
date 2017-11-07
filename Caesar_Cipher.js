@@ -1,6 +1,9 @@
 const prompt = require('prompt');
 
 const getEncryptedLetter = (e, key) => {
+  // return non-alphabetic characters
+  if((/[^a-z]/i).test(e)) return e;
+
   const charCode = e.charCodeAt(0);
   const minCode = e.toUpperCase() === e ? 'A'.charCodeAt(0) : 'a'.charCodeAt(0);
   const diff = charCode - minCode + Number(key);
