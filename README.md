@@ -3,8 +3,8 @@ Some CNS programs in JavaScript.
 
 - [x] Binary to Decimal and Decimal to Binary
 - [x] Caesar Cipher
-- [ ] Monoalphabetic Cipher
-- [ ] Polyalphabetic Cipher
+- [x] Monoalphabetic Cipher
+- [x] Polyalphabetic Cipher
 - [ ] Playfair
 - [ ] Hill Cipher
 - [x] Password Strength

@@ -29,7 +29,7 @@ prompt.start();
 prompt.get('text', (err, { text }) => {
 	if(!err) {
 		const keys = text.split('').map(() => getRandomKey())
-
+		
 		console.log(`Original text: ${text}`);
 		console.log(`keys: ${keys}`);
 
