@@ -17,3 +17,12 @@ prompt.get('binaryNumber', (err, { binaryNumber }) => {
 		});
 	}
 });
+
+
+// Output
+// arshad@anon ~ $ node Binary_to_Decimal_and_Decimal_to_Binary.js 
+// prompt: binaryNumber:  111
+// Decimal equivalent - 7
+//
+// prompt: decimalNumber:  10
+// Binary equivalent - 1010

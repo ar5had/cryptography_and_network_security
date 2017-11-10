@@ -25,3 +25,8 @@ prompt.get('password', (err, { password }) => {
 		console.log(`Password strength: ${findPasswordStrength(password)}`);
 	}
 });
+
+// Output
+// arshad@anon ~ $ node Password_Strength.js
+// prompt: password:  Asdfgh123
+// Password strength: Strong Password

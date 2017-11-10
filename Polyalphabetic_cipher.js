@@ -29,7 +29,7 @@ prompt.start();
 prompt.get('text', (err, { text }) => {
 	if(!err) {
 		const keys = text.split('').map(() => getRandomKey())
-		
+
 		console.log(`Original text: ${text}`);
 		console.log(`keys: ${keys}`);
 
@@ -39,3 +39,11 @@ prompt.get('text', (err, { text }) => {
 		console.log(`Decrypted text: ${decrypt(encryptedText, keys)}`)
 	}
 });
+
+// Output
+// arshad@anon ~ $ node Polyalphabetic_cipher.js 
+// prompt: text:  arshad Khan
+// Original text: arshad Khan
+// keys: 21,1,21,15,7,7,10,15,19,11,17
+// Encrypted text: vsnwhk Zale
+// Decrypted text: arshad Khan

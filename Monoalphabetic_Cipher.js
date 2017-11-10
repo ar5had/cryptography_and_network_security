@@ -20,3 +20,9 @@ prompt.get('text', (err, { text }) => {
 		}
 	}
 });
+
+// Output
+// arshad@anon ~ $ node Monoalphabetic_Cipher.js
+// prompt: text:  arshad
+// Original text: arshad
+// Encrypted text: SQECSA
