@@ -8,5 +8,5 @@ Some CNS programs in JavaScript.
 - [x] Playfair
 - [ ] Hill Cipher
 - [x] Password Strength
-- [ ] RSA
+- [x] RSA
 - [ ] Rail Fence

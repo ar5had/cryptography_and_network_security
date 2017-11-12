@@ -159,3 +159,19 @@ prompt.get('key', (err, { key }) => {
 		});
 	}
 });
+
+// Output
+//
+// arshad@anon ~ $ node Playfair.js
+// prompt: key:  playfair encryption
+// prompt: text:  name
+//
+// Matrix:
+//
+// P L A Y F
+// I R E N C
+// T O B D G
+// H K M Q S
+// U V W X Z
+//
+// Encrypted text: EY WB
