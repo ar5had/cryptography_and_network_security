@@ -41,8 +41,6 @@ const getPairs = text => {
 
 	while(text) {
 		let subStr = text.slice(0, 2);
-		// make sure odd length string get paired with extraLetter
-		subStr = subStr.length < 2 ? subStr + X : subStr;
 
 		if(subStr[0] === subStr[1]){
 			// separates all duplicate letters with X
@@ -55,6 +53,10 @@ const getPairs = text => {
 				subStr = text.slice(0, 2);
 			}
 		} else {
+			// make sure odd length string get paired with extraLetter
+      // putting this code inside else block to prevent infinite loop
+      subStr = subStr.length < 2 ? subStr + X : subStr;
+
 			pairs.push(subStr);
 
 			text = text.slice(2);
@@ -106,8 +108,11 @@ const encrypt = (text, matrix) => {
 		const [r1, c1, r2, c2] = getRowAndColumn(pair, matrix);
 
 		let encryptedPair = '';
+
+		// dodging the cases in which there are duplicate X chars
+		if(pair[0] === 'X' && pair[1] === 'X') return '';
 		// Case 1
-		if(c1 === c2) {
+		else if(c1 === c2) {
 			encryptedPair = matrix[(r1 + 1) % 5][c1] + matrix[(r2 + 1) % 5][c2];
 		}
 		// Case 2
