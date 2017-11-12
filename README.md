@@ -5,7 +5,7 @@ Some CNS programs in JavaScript.
 - [x] Caesar Cipher
 - [x] Monoalphabetic Cipher
 - [x] Polyalphabetic Cipher
-- [ ] Playfair
+- [x] Playfair
 - [ ] Hill Cipher
 - [x] Password Strength
 - [ ] RSA

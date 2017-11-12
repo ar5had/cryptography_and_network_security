@@ -127,7 +127,7 @@ const encrypt = (text, matrix) => {
 		return encryptedPair;
 	});
 
-	return pairs.join('');
+	return pairs.join(' ');
 };
 
 prompt.start();
@@ -152,7 +152,7 @@ prompt.get('key', (err, { key }) => {
 				let encryptedText = encrypt(text, matrix);
 
 				// insert spaces
-				encryptedText = insertSpaces(encryptedText, spaceIndexes);
+				// encryptedText = insertSpaces(encryptedText, spaceIndexes);
 
 				console.log("\nEncrypted text:", encryptedText);
 			}
