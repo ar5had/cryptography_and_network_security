@@ -5,3 +5,6 @@
 
 ## RSA
 1. What if encryptedText is 0 then how to find plainText? Ex - try 21 as plainText.
+
+## Rail Cipher
+1. How to make matrix with key `k` from encryptedText?

@@ -9,4 +9,4 @@ Some CNS programs in JavaScript.
 - [ ] Hill Cipher
 - [x] Password Strength
 - [x] RSA
-- [ ] Rail Fence
+- [x] Rail Fence
