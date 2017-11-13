@@ -88,11 +88,31 @@ prompt.get('key', (err, { key }) => {
 
 				const decryptedText = decrypt(encryptedText, key);
 
-				console.log(`\nEncrypted text: ${encryptedText}`);
-				console.log(`\nDecrypted text: ${decryptedText}`);
+				console.log(
+					`\nEncrypted text: ${insertSpaces(encryptedText, spaceIndexes)}`);
+				console.log(
+					`\nDecrypted text: ${insertSpaces(decryptedText, spaceIndexes)}`);
 			}
 		});
 	}
 });
 
 // Output
+//
+// arshad@anon ~ $ node Rail_Fence.js 
+// prompt: key:  6
+// prompt: plainText:  arshad khan
+//
+// Plain text: arshad khan
+//
+// Matrix:
+// a _  _  _  _  _  _  _  _  _
+//  _ r _  _  _  _  _  _  _  _ n
+//  _  _ s _  _  _  _  _  _ a _
+//  _  _  _ h _  _  _  _ h _  _
+//  _  _  _  _ a _  _ k _  _  _
+//  _  _  _  _  _ d _  _  _  _
+//
+// Encrypted text: arnsah hakd
+//
+// Decrypted text: arshad khan
