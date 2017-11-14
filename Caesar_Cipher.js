@@ -20,8 +20,10 @@ prompt.get('text', (err, { text }) => {
 	if(!err) {
 		prompt.get('key', (err, { key }) => {
 			if(!err) {
+
+        key = Number(key);
         // handles negative key test cases
-        if(key < 0) return 26 + key;
+        if(key < 0) key = 26 - (-key)%26;
 
 				console.log(`Original text: ${text}`);
 				console.log(`Encrypted text: ${encrypt(text,key)}`);
@@ -31,7 +33,7 @@ prompt.get('text', (err, { text }) => {
 });
 
 // Output
-// arshad@anon ~ $ node Caesar_Cipher.js 
+// arshad@anon ~ $ node Caesar_Cipher.js
 // prompt: text:  timsy bhatia
 // prompt: key:  2
 // Original text: timsy bhatia
